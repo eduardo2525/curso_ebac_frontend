@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body > header {
+    background: #2f3640;
+    padding: 16px 0;
+    color: #f5f6fa;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header li {
+    display: inline;
+    padding: 10px;
+    background: black;
+}
+
+header li:hover {
+    background: navy;
+}
+
+header li a {
+    color: #f5f6fa;
+    text-decoration: none;
+}
+.container {
+    width: 1366px;
+    margin: 0 auto;
+}
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles article img {
+    height: 180px;
+}
+
+.articles article {
+    width: 30%;
+}
+
+section {
+    padding: 16px 0;
+}
+
+section h2,
+.articles article {
+    margin-bottom: 16px;
+}
+
+.articles article h3{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a {
+    background-color: blue;
+    color: #fff;
+    padding: 8px;
+    display: inline-block;
+}
+
+#Entretenimento {
+    background: yellowgreen;
+}
+
+#Entretenimento p {
+    color: white;
+}
+
+#Entretenimento article a{
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+#Entretenimento article a:hover {
+    background: red;
+    border-radius: 15px;
+    color: black;
+}
+
+#cor {
+    background: red;
+}
+
+#cor p {
+    color: white;
+}
+
+#cor article a {
+    width: 100px;
+    position: relative;
+    top: 10px;
+    left: 150px;
+    text-decoration: none;
+}
+
+#Tecnologia a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}
+
+#Tecnologia a:hover {
+    cursor: pointer;
+    border-radius: 10px;
+    background: black;
+}
+#sports {
+    background: navy;
+    color: white;
+}
+#sports h3 {
+    color: black;
+}
+#economy {
+    background: yellow;
+    
+}
+#economy p {
+    color: red;
+}
+#button-sports {
+    background: white;
+    color: black;
+    text-decoration: none;
+}
+#button-sports:hover {
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+#button-economy {
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+}
+#button-economy:hover {
+    background: white;
+    color: black;
+}
