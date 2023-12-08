@@ -1,0 +1,151 @@
+@import "variaveis.less";
+@import "mapas.less";
+@breakpointMobaile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: @corBackground;
+}
+
+.container {
+    max-width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    
+    .center {
+        max-width: 800px;
+        height: 100%;
+
+        .layout-basic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .avatar {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                    img {
+                    width: 200px;
+                    border-radius: 50%;
+                    z-index: 2;
+                    border: 2px solid black;
+                }
+            }
+
+            .text {
+                text-align: center;
+                font-family: open sans;
+                h3 {
+                    font-size: 28px;
+                    margin-bottom: 20px;
+                    color: black;
+                    box-shadow: 5px 5px 5px #c9dbdb;
+                    text-shadow: 2px 2px 1px #dce4e3;
+                }
+                .description {
+                    p {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        .content-list {
+            width: 600px;
+            margin: 20px auto;
+
+            nav {
+                ul {
+                    list-style: none;
+
+                    li {
+                        width: 300px;
+                        height: 40px;
+                        margin:  10px auto;
+                        border: 2px solid;
+                        margin-bottom: 20px;
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        border-radius: 20px 20px 20px 20px;
+                        cursor: pointer;
+                        box-shadow: 10px 10px 10px #colors[box-shadow];
+
+                        &:hover {
+                            transition: 0.7s ease;
+                            transform: scale(1.2);
+                            box-shadow: 0px 0px 0px @corBoxLi;
+                            background-color: @corLiHover;
+                        }
+
+                        i {
+                            font-size: 24px;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            font-size: 24px;
+                            color: #colors[color];
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .border {
+        max-width: 600px;
+        width: 200px;
+        position: relative;
+        top: 20px;
+        margin: 0 auto;
+        border: 2px solid #c3fdf5;
+        animation: animate 8s ease-out infinite forwards;
+    }
+}
+
+@keyframes animate {
+    to {
+        width: 100%;
+    }
+
+}
+@media @breakpointMobaile {
+    .container {
+        width: 90%;
+
+        .center {
+            width: 90%;
+
+            .content-list {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+@media @breakpointTablet {
+    .container {
+        width: 90%;
+
+        .center {
+            width: 90%;
+        }
+    }
+}
